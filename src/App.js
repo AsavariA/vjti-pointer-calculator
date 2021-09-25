@@ -1,7 +1,8 @@
 import * as React from 'react';
 // import Button from '@mui/material/Button';
 // import Box from '@mui/material/Box';
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+// import {useTheme} from '@mui/material/styles';
 import Main from './Components/Main';
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
@@ -11,7 +12,7 @@ function MyApp() {
   // const colorMode = React.useContext(ColorModeContext);
 
   return (
-    <div>
+    <div className='app-wrapper'>
       {/* <Box
         sx={{
           width: '100%',

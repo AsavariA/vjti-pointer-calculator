@@ -6,3 +6,17 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+.app-wrapper{
+  display: flex;
+  justify-content: center;
+  max-width: 650px;
+  margin: auto;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.stepper-wrapper{
+  margin: 2rem 0;
+}
