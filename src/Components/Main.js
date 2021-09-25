@@ -11,6 +11,7 @@ import MuiAlert from '@mui/material/Alert';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Semester from './Semester';
 import Branch from './Branch';
+import Subjects from './Subjects';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} {...props} />;
@@ -34,13 +35,12 @@ const Main = () => {
             setErrorMessage('Please select a semester before proceeding!')
             setOpen(true);
             return;
+        } else if (activeStep === 1 && userData.branch === '') {
+            setErrorMessage('Please select a branch before proceeding!')
+            setOpen(true);
+            return;
         }
-
-        if (activeStep === 0 && (userData.semester === 1 || userData.semester === 2)) {
-            setActiveStep((prevActiveStep) => prevActiveStep + 2);
-        } else {
-            setActiveStep((prevActiveStep) => prevActiveStep + 1);
-        }
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
     const handleClose = (event, reason) => {
@@ -67,11 +67,7 @@ const Main = () => {
         switch (step) {
             case 0: return (<Semester userData={userData} setUserData={setUserData} />);
             case 1: return (<Branch userData={userData} setUserData={setUserData} />);
-            case 2:
-                return (
-                    <Typography sx={{ mt: 2, mb: 1 }}>
-                        Step 0
-                    </Typography>);
+            case 2: return (<Subjects userData={userData} />);
             default:
                 return 'Unknown step';
         }

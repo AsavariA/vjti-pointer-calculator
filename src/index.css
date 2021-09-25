@@ -10,7 +10,7 @@
 .app-wrapper{
   display: flex;
   justify-content: center;
-  max-width: 650px;
+  max-width: 700px;
   margin: auto;
   align-items: center;
   min-height: 100vh;
