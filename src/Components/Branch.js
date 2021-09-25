@@ -5,23 +5,30 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const numArray = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII']
+const branchArray = ['Computer Science',
+    'Information Technology',
+    'Electronics & Telecommunication',
+    'Electronics',
+    'Civil',
+    'Mechanical',
+    'Textile',
+    'Production']
 
-const Semester = ({ userData, setUserData }) => {
+const Branch = ({ userData, setUserData }) => {
     return (
         <Box sx={{ minWidth: 120 }}>
             <FormControl fullWidth>
-                <InputLabel>Semester</InputLabel>
+                <InputLabel>Branch</InputLabel>
                 <Select
                     required
-                    value={userData.semester}
-                    label="Semester"
-                    onChange={(e) => setUserData({ ...userData, 'semester': e.target.value })}
+                    value={userData.branch}
+                    label="Branch"
+                    onChange={(e) => setUserData({ ...userData, 'branch': e.target.value })}
                 >
                     {
-                        numArray.map((e, i) => {
+                        branchArray.map((e, i) => {
                             return (
-                                <MenuItem value={i + 1} key={i + 1}>{`Sem ${e}`}</MenuItem>
+                                <MenuItem value={i} key={i}>{e}</MenuItem>
                             )
                         })
                     }
@@ -31,4 +38,4 @@ const Semester = ({ userData, setUserData }) => {
     )
 }
 
-export default Semester
+export default Branch

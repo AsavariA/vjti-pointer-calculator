@@ -6,29 +6,48 @@ import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Semester from './Semester';
+import Branch from './Branch';
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} {...props} />;
+});
 
 const steps = ['Select Semester', 'Select Branch', 'Enter Grades'];
 
 const Main = () => {
     const [activeStep, setActiveStep] = React.useState(0);
+    const [open, setOpen] = React.useState(false);
+    const [errorMessage, setErrorMessage] = React.useState('');
     const matches = useMediaQuery('(max-width:600px)');
     const [userData, setUserData] = React.useState({
         semester: '',
         branch: '',
-        grades: '',
     });
 
     const handleNext = () => {
 
-
+        if (activeStep === 0 && userData.semester === '') {
+            setErrorMessage('Please select a semester before proceeding!')
+            setOpen(true);
+            return;
+        }
 
         if (activeStep === 0 && (userData.semester === 1 || userData.semester === 2)) {
             setActiveStep((prevActiveStep) => prevActiveStep + 2);
         } else {
             setActiveStep((prevActiveStep) => prevActiveStep + 1);
         }
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpen(false);
     };
 
     const handleBack = () => {
@@ -46,15 +65,8 @@ const Main = () => {
 
     const getStepContent = (step) => {
         switch (step) {
-            case 0:
-                return (
-                    <Semester userData={userData} setUserData={setUserData} />
-                );
-            case 1:
-                return (
-                    <Typography sx={{ mt: 2, mb: 1 }}>
-                        Step 0
-                    </Typography>);
+            case 0: return (<Semester userData={userData} setUserData={setUserData} />);
+            case 1: return (<Branch userData={userData} setUserData={setUserData} />);
             case 2:
                 return (
                     <Typography sx={{ mt: 2, mb: 1 }}>
@@ -67,6 +79,11 @@ const Main = () => {
 
     return (
         <Box sx={{ width: '100%' }}>
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+                    {errorMessage}
+                </Alert>
+            </Snackbar>
             <div className='stepper-wrapper'>
                 <Stepper activeStep={activeStep} orientation={matches ? 'vertical' : 'horizontal'}>
                     {steps.map((label, index) => {
