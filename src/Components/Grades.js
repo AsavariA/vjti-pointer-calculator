@@ -5,9 +5,19 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const gradeArray = [['AA', 10], ['AB', 9], ['BB', 8], ['BC', 7], ['CC',6],['CD',5],['DD',4]]
+const gradeArray = [['AA', 10], ['AB', 9], ['BB', 8], ['BC', 7], ['CC', 6], ['CD', 5], ['DD', 4]]
 
-const Grades = () => {
+const Grades = ({scoreArray, index, credit}) => {
+
+    const [val, setVal] = React.useState(scoreArray[index])
+
+    const handleChange = (e) => {
+        scoreArray[index] = [e.target.value,credit]
+        setVal(scoreArray[index][0])
+        console.log(scoreArray)
+        console.log(scoreArray.includes(''))
+    }
+
     return (
         <Box sx={{ minWidth: 120 }}>
             <FormControl fullWidth>
@@ -15,6 +25,8 @@ const Grades = () => {
                 <Select
                     required
                     label="Grade"
+                    value = {val}
+                    onChange={handleChange}
                 >
                     {
                         gradeArray.map((e, i) => {
