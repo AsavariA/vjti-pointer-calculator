@@ -1,65 +1,29 @@
 import * as React from 'react';
-// import Button from '@mui/material/Button';
-// import Box from '@mui/material/Box';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-// import {useTheme} from '@mui/material/styles';
 import Main from './Components/Main';
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
-
-function MyApp() {
-  // const theme = useTheme();
-  // const colorMode = React.useContext(ColorModeContext);
-
-  return (
-    <div className='app-wrapper'>
-      {/* <Box
-        sx={{
-          width: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-          bgcolor: 'background.default',
-          color: 'text.primary',
-          borderRadius: 1,
-          p: 3,
-        }}
-      >
-        {theme.palette.mode} mode
-        <Button sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-          {theme.palette.mode === 'dark' ? <p>Light</p> : <p>Dark</p>}
-        </Button>
-      </Box> */}
-      <Main />
-    </div>
-  );
-}
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ff4400',
+    },
+    secondary: {
+      main: '#082063',
+    },
+  },
+  typography: {
+    fontFamily: ["'Inter'", 'sans-serif'].join(',')
+  }
+});
 
 export default function ToggleColorMode() {
-  const [mode, setMode] = React.useState('light');
-  const colorMode = React.useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-      },
-    }),
-    [],
-  );
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode],
-  );
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <MyApp />
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <ThemeProvider theme={theme}>
+      <h1>VJTI Pointer Calculator</h1>
+      <div className='app-wrapper'>
+        <Main />
+      </div>
+    </ThemeProvider>
   );
 }

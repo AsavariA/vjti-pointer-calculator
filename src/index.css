@@ -7,13 +7,17 @@
   font-family: 'Inter', sans-serif;
 }
 
+h1{
+  margin: 4rem 0.5rem 1rem 0.5rem;
+  text-align: center;
+}
+
 .app-wrapper{
   display: flex;
   justify-content: center;
   max-width: 700px;
   margin: auto;
   align-items: center;
-  min-height: 100vh;
   padding: 1rem;
 }
 
@@ -28,7 +32,7 @@
   margin: 1rem 0;
 }
 
-.css-a1sg1c-MuiButtonBase-root-MuiButton-root, .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+.css-g8q7n7-MuiButtonBase-root-MuiButton-root, .css-nkyq5h-MuiButtonBase-root-MuiButton-root{
   float: right;
 }
 
@@ -53,6 +57,12 @@ iframe{
 }
 
 @media only screen and (max-width: 600px){
+  h1{
+    margin: 2rem 0.5rem;
+    text-align: center;
+    font-size: 25px;
+  }
+
   .stepper-wrapper{
     margin: 0;
   }

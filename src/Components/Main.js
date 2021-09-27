@@ -81,6 +81,7 @@ const Main = () => {
                     {errorMessage}
                 </Alert>
             </Snackbar>
+
             <div className='stepper-wrapper'>
                 <Stepper activeStep={activeStep} orientation={matches ? 'vertical' : 'horizontal'}>
                     {steps.map((label, index) => {
