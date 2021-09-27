@@ -22,7 +22,7 @@ const Subjects = ({ userData, pointer, setPointer, handleNext }) => {
         }
 
         if (isNaN(sum / totalCreds)) {
-            alert('Invalid pinter! Fill all the fields.')
+            alert('Fill all the fields!')
         } else {
             setPointer(sum / totalCreds)
             handleNext()
@@ -37,7 +37,10 @@ const Subjects = ({ userData, pointer, setPointer, handleNext }) => {
                     return (
                         <div key={i}>
                             <div className='listGrid'>
-                                <p>{`${elem[0]} - ${elem[1]}`}</p>
+                                <div>
+                                    <p>{elem[0]}</p>
+                                    <i><p style={{color: 'grey', fontSize: '13px', marginTop: '5px'}}>{`${elem[1]} Credit`}</p></i>
+                                </div>
                                 <Grades scoreArray={scoreArray} index={i} credit={elem[1]} />
                             </div>
                             {

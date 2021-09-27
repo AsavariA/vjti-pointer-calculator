@@ -48,3 +48,53 @@ export const TY6IT = [
     ['Parallel Computing Lab', 1],
     ['Professional Elective I Lab', 1],
 ]
+
+export const TY5EXTC = [
+    ['Electromagnetic Wave Engineering', 4],
+    ['Control Systems', 3],
+    ['Digital Signal Processing', 3],
+    ['Digital Signal Processing Lab', 1],
+    ['Digital Communication Systems', 3],
+    ['Digital Communication Systems Lab', 1],
+    ['Computer Communication Networks', 3],
+    ['Computer Communication Networks Lab', 1],
+    ['Communications Circuit Design lab', 2]
+]
+
+export const TY6EXTC = [
+    ['Cellular communication', 3],
+    ['Cellular communication Lab', 1],
+    ['Microwave Engineering', 3],
+    ['Microwave Engineering Lab', 1],
+    ['Principles of VLSI', 3],
+    ['Principles of VLSI Lab', 1],
+    ['Professional Communication Skill', 2],
+    ['Professional Elective I', 3],
+    ['Professional Elective I Lab', 1],
+    ['Open Elective I', 3]
+]
+
+export const TY5ELX = [
+    ['Principles of Communication Systems', 4],
+    ['Electromagnetic Field and Waves', 3],
+    ['Analog Integrated Circuits', 3],
+    ['Analog Integrated Circuits Lab', 1],
+    ['Microprocessor Systems', 3],
+    ['Microprocessor Systems Lab', 1],
+    ['Digital Signal Processing', 3],
+    ['Digital Signal Processing Lab', 1],
+    ['Electronic Engineering Practice', 1],
+]
+
+export const TY6ELX = [
+    ['Control Systems', 3],
+    ['Data Science', 2],
+    ['Data Science Lab', 1],
+    ['Power Electronics', 3],
+    ['Power Electronics Lab', 1],
+    ['Electronics in Service to Society', 3],
+    ['Professional Communication Skills', 2],
+    ['Professional Elective I', 3],
+    ['Professional Elective I Lab', 1],
+    ['Open Elective I', 3]
+]

@@ -39,3 +39,53 @@ export const SY4IT = [
     ['Database Management Systems Lab', 1],
     ['Introduction to Geospatial Technologies', 3]
 ]
+
+export const SY3EXTC = [
+    ['Mathematics for Electrical Engineers I', 3],
+    ['Signals and Systems', 3],
+    ['Network Analysis and Synthesis', 3],
+    ['Electronics Circuit Analysis and Design', 3],
+    ['Electronics Circuit Analysis and Design Lab',1],
+    ['Analog Communication', 3],
+    ['Analog Communication Circuits Lab',1],
+    ['Digital Logic Design',2],
+    ['Digital Logic Design Lab',1]
+]
+
+export const SY4EXTC = [
+    ['Mathematics for Electrical Engineers II', 3], 
+    ['Numerical Techniques', 3],
+    ['Principles of Digital Communication', 3],
+    ['Principles of Digital Communication Lab', 1],
+    ['Integrated Circuits and Applications',2],
+    ['Integrated Circuits and Applications Lab',1],
+    ['Microprocessor and Microcontroller', 3],
+    ['Microprocessor and Microcontroller Lab', 1],
+    ['Python Programming', 3],
+    ['Python Programming Lab', 1],
+]
+
+export const SY3ELX = [
+    ['Mathematics for Electrical Engineers I', 3],
+    ['Electrical Networks',3],
+    ['Electronics Circuit Analysis and Design I', 3],
+    ['Electronics Circuit Analysis and Design I Lab',1],
+    ['Digital Combinational Circuits',3],
+    ['Digital Combinational Circuits Lab',1],
+    ['Numerical Techniques', 2],
+    ['Python Programming', 3],
+    ['Python Programming Lab', 1],
+]
+
+export const SY4ELX = [
+    ['Mathematics for Electrical Engineers II', 3], 
+    ['Signals and Systems', 3],
+    ['Digital Sequential Circuits', 3],
+    ['Digital Sequential Circuits Lab', 1],
+    ['Electronics Circuit Analysis and Design II', 3],
+    ['Electronics Circuit Analysis and Design II Lab', 1],
+    ['Measurements and Instrumentation', 2],
+    ['Measurements and Instrumentation Lab', 1],
+    ['Microprocessor and Microcontroller', 3],
+    ['Microprocessor and Microcontroller Lab', 1],
+]

@@ -10,6 +10,7 @@ const branchArray = [
     'Information Technology',
     'Electronics & Telecommunication',
     'Electronics',
+    'Electrical',
     'Civil',
     'Mechanical',
     'Textile',

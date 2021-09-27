@@ -69,11 +69,11 @@ iframe{
 
   .listGrid{
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
-  .listGrid p{
-    margin-bottom: 15px;
+  .listGrid i p{
+    margin-bottom: 10px;
   }
 
   .finishButton{
