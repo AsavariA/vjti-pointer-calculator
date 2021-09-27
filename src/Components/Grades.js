@@ -14,8 +14,6 @@ const Grades = ({scoreArray, index, credit}) => {
     const handleChange = (e) => {
         scoreArray[index] = [e.target.value,credit]
         setVal(scoreArray[index][0])
-        console.log(scoreArray)
-        console.log(scoreArray.includes(''))
     }
 
     return (

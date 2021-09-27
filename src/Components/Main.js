@@ -5,16 +5,16 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Semester from './Semester';
 import Branch from './Branch';
 import Subjects from './Subjects';
+import Result from './Result';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} {...props} />;
+    return <MuiAlert elevation={6} ref={ref} {...props} />;
 });
 
 const steps = ['Select Semester', 'Select Branch', 'Enter Grades'];
@@ -23,6 +23,7 @@ const Main = () => {
     const [activeStep, setActiveStep] = React.useState(0);
     const [open, setOpen] = React.useState(false);
     const [errorMessage, setErrorMessage] = React.useState('');
+    const [pointer, setPointer] = React.useState(0);
     const matches = useMediaQuery('(max-width:600px)');
     const [userData, setUserData] = React.useState({
         semester: '',
@@ -61,15 +62,15 @@ const Main = () => {
             branch: '',
             grades: '',
         })
+        setPointer(0);
     };
 
     const getStepContent = (step) => {
         switch (step) {
             case 0: return (<Semester userData={userData} setUserData={setUserData} />);
             case 1: return (<Branch userData={userData} setUserData={setUserData} />);
-            case 2: return (<Subjects userData={userData} />);
-            default:
-                return 'Unknown step';
+            case 2: return (<Subjects userData={userData} pointer={pointer} setPointer={setPointer} handleNext={handleNext} />);
+            default: return null;
         }
     };
 
@@ -99,9 +100,7 @@ const Main = () => {
             }
             {activeStep === steps.length ? (
                 <React.Fragment>
-                    <Typography sx={{ mt: 2, mb: 1 }}>
-                        All steps completed - you&apos;re finished
-                    </Typography>
+                    <Result pointer={pointer} />
                     <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                         <Box sx={{ flex: '1 1 auto' }} />
                         <Button onClick={handleReset}>Reset</Button>
@@ -109,8 +108,7 @@ const Main = () => {
                 </React.Fragment>
             ) : (
                 <React.Fragment>
-                    {/* <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography> */}
-                    <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+                    <div className='buttons'>
                         <Button
                             color="inherit"
                             disabled={activeStep === 0}
@@ -119,10 +117,13 @@ const Main = () => {
                         >
                             Back
                         </Button>
-                        <Button onClick={handleNext}>
-                            {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                        </Button>
-                    </Box>
+                        {
+                            activeStep === steps.length - 1 ? null :
+                                <Button onClick={handleNext}>
+                                    Next
+                                </Button>
+                        }
+                    </div>
                 </React.Fragment>
             )}
         </Box>
