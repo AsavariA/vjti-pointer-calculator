@@ -98,3 +98,52 @@ export const TY6ELX = [
     ['Professional Elective I Lab', 1],
     ['Open Elective I', 3]
 ]
+
+export const TY5ELE = [
+    ['Mathematics V', 4],
+    ['Signal & Systems', 3],
+    ['Electromagnetic Fields & Waves', 3],
+    ['Control System - I', 3],
+    ['Microprocessor and Microcontroller', 3],
+    ['Microprocessor and Microcontroller Lab', 1],
+    ['Electromagnetic Field Lab', 1],
+    ['Control System Lab', 1],
+    ['Simulation Software I', 2]
+]
+
+export const TY6ELE = [
+    ['Electric Drives', 3],
+    ['Electric Drives Lab', 1],
+    ['Digital Signal Processing', 3],
+    ['Digital Signal Processing Lab', 1],
+    ['Control System - II', 3],
+    ['Professional Elective I', 3],
+    ['Professional Elective I Lab', 1],
+    ['Open Elective I', 3],
+    ['Professional Communication skills', 2],
+    ['Simulation Software II', 1]
+]
+
+export const TY5CIV = [
+    ['Structural Analysis – II',4],
+    ['Geotechnical Engineering',3],
+    ['Hydrology and Water Resource Engineering',4],
+    ['Concrete Technology',3],
+    ['Building Drawing and Services',2],
+    ['Professional Communiaction Skill',2],
+    ['Concrete and Soil Lab',1],
+    ['Building Drawing and Services Lab',1],
+]
+
+export const TY6CIV = [
+    ['Design of RCC & PSC Structures',3],
+    ['Environmental Engineering',3],
+    ['Quantity Survey and Estimation',3],
+    ['Pavement Engineering',3],
+    ['Professional Elective I', 3],
+    ['Open Elective I', 3],
+    ['Design of RCC Lab',1],
+    ['Quantity Survey and Estimation Lab',1],
+    ['Transportation Engineering Lab',1],
+    ['Site Visit',1]
+]
