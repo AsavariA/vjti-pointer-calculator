@@ -110,12 +110,12 @@ export const FY8ELE = [
 ]
 
 export const FY7CIV = [
-    ['Design of Steel Structures',3],
-    ['Design of Steel Structures Lab',1],
-    ['Water and Wastewater Engineering',3],
-    ['Water and Wastewater Engineering Lab',1],
-    ['Transportation Engineering',3],
-    ['Development Engineering Laboratory',1],
+    ['Design of Steel Structures', 3],
+    ['Design of Steel Structures Lab', 1],
+    ['Water and Wastewater Engineering', 3],
+    ['Water and Wastewater Engineering Lab', 1],
+    ['Transportation Engineering', 3],
+    ['Development Engineering Laboratory', 1],
     ['Professional Elective II', 3],
     ['Open Elective II', 3],
     ['Project I', 2],
@@ -123,11 +123,71 @@ export const FY7CIV = [
 ]
 
 export const FY8CIV = [
-    ['Construction Management',3],
-    ['Construction Management Lab',1],
-    ['Construction Entrepreneurship',4],
-    ['Structural Design Laboratory',1],
+    ['Construction Management', 3],
+    ['Construction Management Lab', 1],
+    ['Construction Entrepreneurship', 4],
+    ['Structural Design Laboratory', 1],
     ['Professional Elective III', 3],
     ['Professional Elective IV', 3],
     ['Project II', 4],
+]
+
+export const FY7MECH = [
+    ['Finite Element Method', 2],
+    ['Finite Element Method Lab', 1],
+    ['Design of Mechanical Systems', 4],
+    ['Operations Management', 3],
+    ['Professional Elective II', 3],
+    ['Professional Elective II Lab', 1],
+    ['Open Elective II', 3],
+    ['Project I', 2],
+    ['Internship', 2],
+]
+
+export const FY8MECH = [
+    ['Mechatronics', 3],
+    ['Mechatronics Lab', 1],
+    ['Refrigeration and Air-Conditioning', 3],
+    ['Refrigeration and Air-Conditioning Lab', 1],
+    ['Professional Elective III', 4],
+    ['Professional Elective IV', 4],
+    ['Project II', 4],
+]
+
+export const FY7TEXT = [
+    ['Process Control in Textile Manufacturing', 4],
+    ['Process Control in Textile Manufacturing Lab', 1],
+    ['Advanced Textile Materials', 3],
+    ['Textile Composites', 3],
+    ['Textile Composites Lab', 1],
+    ['Professional Elective II', 3],
+    ['Professional Elective II Lab', 1],
+    ['Open Elective II', 3],
+    ['Project I', 2],
+    ['Internship', 2],
+]
+
+export const FY8TEXT = [
+    ['Textile Management', 4],
+    ['Sustainable Textile Manufacturing', 4],
+    ['Professional Elective III', 3],
+    ['Professional Elective III Lab', 1],
+    ['Professional Elective IV', 4],
+    ['Project II', 4],
+]
+
+export const FY7PROD = [
+    ['Industrial Training and Project', 25]
+]
+
+export const FY8PROD = [
+    ['Economics ,Finance, Accounting and Costing', 4],
+    ['Supply Chain Management', 4],
+    ['Operation Research', 4],
+    ['Composite Material and Processing technology', 3],
+    ['Statistical Analysis Lab', 1],
+    ['Organizational behavior', 3],
+    ['Optimization Lab', 1],
+    ['Program Elective course-I', 3],
+    ['Program Elective course Lab', 1]
 ]

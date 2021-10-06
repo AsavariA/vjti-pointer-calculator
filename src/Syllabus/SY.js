@@ -137,3 +137,69 @@ export const SY4CIV = [
     ['Construction Material Laboratory', 1]
 ]
 
+export const SY3MECH = [
+    ['Mathematics for Mechanical Engineers I', 4],
+    ['Thermodynamics', 4],
+    ['Strength of Materials', 3],
+    ['Strength of Materials Lab', 1],
+    ['Material Science', 3],
+    ['Material Science Lab', 1],
+    ['Electrical Machines and Electronic Devices', 2],
+    ['Electrical Machines and Electronic Devices Lab', 1],
+    ['Machine Drawing Lab', 2]
+]
+
+export const SY4MECH = [
+    ['Mathematics for Mechanical Engineers II', 4],
+    ['Kinematics of Machinery', 4],
+    ['Fluid Mechanics', 3],
+    ['Fluid Mechanics Lab', 1],
+    ['Manufacturing Processes', 3],
+    ['Manufacturing Processes Lab', 1],
+    ['Mechanical Measurements', 3],
+    ['Mechanical Measurements Lab', 1],
+]
+
+export const SY3TEXT = [
+    ['Mathematics for Textiles', 4],
+    ['Textiles Fibres', 4],
+    ['Fundamentals of Yarn Manufacturing Technology', 3],
+    ['Spinning Preparatory Lab', 1],
+    ['Fundamentals of Fabric Manufacturing Technology', 3],
+    ['Weaving Preparatory Lab', 1],
+    ['Technology of Textile Pretreatment & Dyeing', 3],
+    ['Textile Pretreatment & Dyeing Lab', 1],
+]
+
+export const SY4TEXT = [
+    ['Statistics for Textile Technology', 4],
+    ['Yarn Manufacturing Technology', 3],
+    ['Yarn Manufacturing Laboratory', 1],
+    ['Fabric Manufacturing Technology', 3],
+    ['Fabric Manufacturing Laboratory', 1],
+    ['Testing of Fibre & Yarn', 3],
+    ['Testing of Fibre & Yarn Laboratory', 1],
+    ['Technology of Textile Printing & Finishing', 4]
+]
+
+export const SY3PROD = [
+    ['Mathematics for Production Engineers', 4],
+    ['Manufacturing Technology', 4],
+    ['MT Lab', 1],
+    ['Strength of Material', 3],
+    ['SOM Lab', 1],
+    ['Basic Thermodynamics', 3],
+    ['Industrial Management', 2],
+    ['Production and Machine Drawing', 2],
+]
+
+export const SY4PROD = [
+    ['Applied Probability and Statistics', 3],
+    ['Applied Thermodynamics', 4],
+    ['ATD Laboratory', 1],
+    ['Fluid Mechanics and Machinery', 3],
+    ['FMM Laboratory', 1],
+    ['Electrical and Electronics Engineering', 3],
+    ['EEE Lab', 1],
+    ['Managerial Economics, Finance and Costing', 4]
+]

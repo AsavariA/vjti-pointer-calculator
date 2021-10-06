@@ -1,4 +1,4 @@
-export const Sem1 = [
+export const SEM1 = [
     ['Applied Chemistry I', 2],
     ['Applied Chemistry Laboratory I ', 1],
     ['Applied Physics I', 3],
@@ -11,7 +11,7 @@ export const Sem1 = [
     ['Business English', 2]
 ]
 
-export const Sem2 = [
+export const SEM2 = [
     ['Applied Chemistry II', 2],
     ['Applied Chemistry Laboratory II ', 1],
     ['Applied Physics II', 3],
